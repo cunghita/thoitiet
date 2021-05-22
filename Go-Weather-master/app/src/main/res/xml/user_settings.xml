@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="@string/main">
+        <EditTextPreference
+            android:defaultValue="Ha tinh"
+            android:inputType="text"
+            android:key="location"
+            android:title="@string/city" />
+
+        <ListPreference
+            android:defaultValue="@string/vi"
+            android:entries="@array/country"
+            android:entryValues="@array/countryCodes"
+            android:key="countrykey"
+            android:summary=""
+            android:title="@string/country" />
+
+        <ListPreference
+            android:entries="@array/unitNames"
+            android:entryValues="@array/unitcode"
+            android:key="unitcode"
+            android:defaultValue="metric"
+            android:title="@string/unit"
+            android:summary=""
+            />
+
+        <ListPreference
+            android:entries="@array/daycount"
+            android:entryValues="@array/daycountValues"
+            android:key="days"
+            android:defaultValue="14"
+            android:title="@string/daycounttitle"
+            android:summary=""
+            />
+
+        <ListPreference
+            android:defaultValue="vi"
+            android:entries="@array/languages"
+            android:entryValues="@array/languagecodes"
+            android:key="lang"
+            android:summary=""
+            android:title="@string/language" />
+
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/notification">
+
+        <CheckBoxPreference
+            android:widgetLayout="@layout/l_switch"
+            android:title="@string/notification"
+            android:summary="@string/nsummary1"
+            android:key="notifications"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen> 
+
